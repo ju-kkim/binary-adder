@@ -43,3 +43,17 @@ function fulladder(bitA, bitB, carry) {
     answer.push(resultCarry, resultSum)
     return answer;
 }
+
+function byteadder(byteA, byteB) {
+    var answer = [];
+    let carry = false
+
+    for(let idx = 0; idx <= byteA.length; idx++){
+        const calc = fulladder(byteA[idx], byteB[idx], carry);
+        const sum = calc[1]
+        answer.push(sum)
+        carry = calc[0];
+    }
+    
+    return answer;
+}
