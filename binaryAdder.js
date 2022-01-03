@@ -30,3 +30,16 @@ function halfadder(bitA, bitB) {
     answer.push(carry, sum)
     return answer;
 }
+
+function fulladder(bitA, bitB, carry) {
+    var answer = [];
+    const bitSum = halfadder(bitA, bitB);
+    const carrySum = halfadder(bitSum[1], carry);
+    
+    const carryCalculate = new LogicGate(bitSum[0], carrySum[0])
+    const resultCarry = carryCalculate.orGate();
+    const resultSum = carrySum[1];
+
+    answer.push(resultCarry, resultSum)
+    return answer;
+}
