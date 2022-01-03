@@ -20,3 +20,13 @@ class LogicGate {
         return !(this.bitA && this.bitB) && (this.bitA || this.bitB)
     }
 }
+
+function halfadder(bitA, bitB) {
+    var answer = [];
+    const calculate = new LogicGate(bitA, bitB)
+
+    const sum = calculate.xorGate();
+    const carry = calculate.andGate();
+    answer.push(carry, sum)
+    return answer;
+}
