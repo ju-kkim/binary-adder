@@ -11,4 +11,8 @@ class LogicGate {
     orGate() {
         return this.bitA || this.bitB
     }
+
+    nandGate() {
+        return !(this.bitA && this.bitB)
+    }
 }
