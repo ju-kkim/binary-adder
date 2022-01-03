@@ -7,4 +7,8 @@ class LogicGate {
     andGate(){
         return this.bitA && this.bitB
     }
+
+    orGate() {
+        return this.bitA || this.bitB
+    }
 }
