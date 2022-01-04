@@ -63,9 +63,7 @@ function byteadder(byteA, byteB) {
         answer.push(sum)
         carry = calc[0];
     }
-    if(carry === true) {
-        answer.push(carry)
-    }
+    answer.push(carry)
     return answer;
 }
 
